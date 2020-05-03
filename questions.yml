@@ -146,7 +146,7 @@ questions:
     label: Default StorageClass for MariaDB
 - variable: persistence.enabled
   default: false
-  description: "Enable persistent volume for Joomla"
+  description: "Enable persistent volume for MediaWiki"
   type: boolean
   required: true
   label: MediaWiki Persistent Volume Enabled
@@ -184,7 +184,7 @@ questions:
     label: Hostname
 - variable: service.type
   default: "NodePort"
-  description: "Joomla Service type"
+  description: "MediaWiki Service type"
   type: enum
   show_if: "ingress.enabled=false"
   options:
@@ -192,7 +192,7 @@ questions:
   - "NodePort"
   - "LoadBalancer"
   required: true
-  label: Joomla Service Type
+  label: MediaWiki Service Type
   show_subquestion_if: "NodePort"
   group: "Services and Load Balancing"
   subquestions:
